@@ -9,7 +9,10 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-</head>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="index.js"></script>
+
+  </head>
 <body>
     <!--------------------navbar--------------------->
     <section class="header">
@@ -50,15 +53,20 @@
                 
               </div>
     </section>
+  
+<!-------------------dark mode--------------------->
+<section>
+  <button type="button" id="btn">🌙</button>
+</section>
 <!-------------------About Me--------------------->
     <section class="feature">
         <div class="container">
             <div class="row">
                 <div class="col-md-6 text-center">
-                    <img src="my.jpg">
+                    <img src="my.jpg"  id="fadeup">
                 </div>
                 <div class="col-md-6 text-center"> <br><br> <br> <br>
-                    <a name="9"><h2> About Me</h2></a> 
+                    <a name="9"><h2 id="fadeup1"> About Me</h2></a> 
                     <p><b>I'm Sithija Jayanath De silva.</b> i'm Undergraduate at University Of Ruhuna , Faculty Of Technology , Department Of ICT.
                         I started my university life in 2024. I went to Rahula College for A/L studies from 2019 to 2023. My first school was MR/Vijitha Central College.
                          I did my O/L exams there. </p>
@@ -76,7 +84,7 @@
     <section id="social-media">
         <div class="container text-center">
             <a name="8"><p>FIND US ON SOCIAL MEDIA</p></a>   
-            <div class="social-icons">
+            <div class="social-icons" id="contact1">
                 <a href="https://www.facebook.com/sithija.jayanath.7?mibextid=ZbWKwL"><img src="images/facebook.png"></a>
                 <a href="https://www.instagram.com/si_thi_ja__/?igsh=MzNlNGNkZWQ4Mg%3D%3D"><img src="images/instagram.png"></a>
                 <a href="#"><img src="images/whatsapp.png"></a>
@@ -85,6 +93,23 @@
             </div>
         </div>  
     </section>
+
+    <script>
+        
+            $('#btn').click(function(){
+                $('body').toggleClass('dark');
+
+                if($('body').hasClass('dark')){
+                  $('#btn').html('☀️');
+      
+      
+                }
+                else{
+                  $('#btn').html('🌙');
+                }
+            });
+
+    </script>
 
 
 </body>

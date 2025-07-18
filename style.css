@@ -57,6 +57,51 @@
 }
 
 
+/*-----------------dark mode color--------------*/
+.dark{
+    background-color: black;
+    color: white;
+}
+
+#btn{
+    background-color: transparent;
+    border: none;
+    
+}
+/*---------about me photo anime----------------------*/
+#fadeup{
+    animation: fadeup both;
+    animation-timeline: view();
+    animation-range: entry 20% cover 65%;
+}
+@keyframes fadeup{
+    from{
+        opacity: 0;
+        transform: translateY(10px) scale(0);
+    }
+    to{
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+    
+}
+
+#fadeup1{
+    animation: fadeup1 ;
+    animation-timeline: view();
+    animation-range: entry 20% cover 60%;
+}
+@keyframes fadeup1{
+    form{
+        
+        transform: rotate(0);
+    }
+    to{
+        
+        transform: rotate(360deg);
+    }
+}
+
 /*---------about me----------------------*/
 .feature{
     margin: 200px 0;
@@ -79,6 +124,22 @@
     line-height: 18px;
 }
 
+/*-------------------contact animetion-----------------------------*/
+#contact1{
+    animation: contact1 both;
+    animation-timeline: view();
+    animation-range: entry 0 cover 30%;
+}
+
+@keyframes contact1{
+    from{
+        opacity: 0;
+        transform: translateY(10px) scale(0.2);
+    }to{
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
 /*-------------------contact-----------------------------*/
 #social-media{
     
@@ -119,3 +180,4 @@
         transform: translateY(0px);
     }
 }
+
